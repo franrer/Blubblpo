@@ -672,17 +672,17 @@ select[name="prios"] {
     font-size: 1em;
     padding: .6em 1.4em .5em .8em;
     width: 20em;
-    max-width: 100%;
+    max-width: 60%;
     box-sizing: border-box;
     margin: 0;
-    border: 1px solid black;
+    border: 2px solid black;
     box-shadow: 0 1px 0 1px rgba(0,0,0,.04);
     border-radius: .5em;
     -webkit-appearance: none;
     appearance: none;
     background-color:  white;
     color: black;
-    margin-left: 20vw;
+    margin-left: 0.5vw;
 }
 select[name="prios"]::-ms-expand {
     display: none;

@@ -45,7 +45,7 @@
                                     <input type="datetime-local" class="form-control form-control-sm rounded-0" name="end_datetime" id="end_datetime" required>
                                 </div>
                                 <div class="form-group mb-2">
-                    <div class="styled-input wide">
+                    <div class="styled-input center">
                         <label class="lable_select_option">Priority:
                             <select name="prios" id="prios">
                                 <option value="High">High</option>
