@@ -1,0 +1,80 @@
+<div class="account_form_small">
+<?php
+
+  echo "<div class='img_container'><img src='../assets/images/avatar_img.png' alt='Avatar' class='avatar'></div>";
+  echo "<strong>Username:  </strong><label >" .$_COOKIE["username"]."</label><br>";
+  echo "<strong>Email:  </strong><label>" .$_COOKIE["email"]."</label>";
+
+  //prüfen, ob angemeldeter Benutzer ein Admin ist
+  if(isset($_COOKIE["privalage"])){
+    if($_COOKIE["privalage"] == 10){
+      echo "<br><strong style='color:red'>A D M I N</strong>";
+    }
+  }
+
+  echo "<form method='get' class='form_div_account'><button class='inline_button_small' type='submit' value='1' name='btnLogout'>Logout</button></form>";
+
+  // prüfen, ob angemeldeter Benutzer ein Admin ist und erst dann wenn ein Admin angemeldet ist,
+  // werden die Users Daten aus dem Datenbank geholt.
+  if(isset($_COOKIE["privalage"])){
+    if($_COOKIE["privalage"] == 10){
+        $conn = mysqli_connect("localhost","root","","ludomo");  //Verbindung zu DB aufbauen
+        $sql = "SELECT * FROM user_tabelle";                    //SQL Statement holt alle Users aus user_tabelle
+        $result  = mysqli_query($conn, $sql);                   //SQL Statement ausführen
+
+        // Wenn Tabelle Userers hat, werden diese in eine Tabelle angezeigt (zusätzlich Optionen zur User Verwaltung)
+        if(mysqli_num_rows($result) > 0){
+          echo "<table style='width:100%'><caption></caption><thead><tr><th>Username</th><th>Email</th><th>Privilege</th><th>Delete</th><th>Upgrade</th><th>Downgrade</th></tr></thead><tbody>";
+          while($row = mysqli_fetch_assoc($result)) {
+            echo "<tr><td>".$row['username']."</td><td>".$row['email']."</td>";
+            if($row['privalage'] == 10){
+              echo "<td style='color:red'>ADMIN</td>";
+            }
+            else{
+              echo "<td style='color:green'>USER</td>";
+
+            }
+            // Buttons zur User Verwaltung. Also User Löschen/zum Admin hoch fördern/ zum Normalen User unter fördern
+            echo "<td><form method='get'><button class='tablebutton'  type='submit' name='btnDelete' value=".$row['ID'].">Delete</button></form></td>";
+            echo "<td><form method='get'><button class='tablebutton'  type='submit' name='btnUpgrade' value=".$row['ID'].">Upgrade</button></form></td>";
+            echo "<td><form method='get'><button class='tablebutton'  type='submit' name='btnDowngrade' value=".$row['ID'].">Downgrade</button></form></td></tr>";
+          }
+        }
+        echo "</tbody></table>";
+        mysqli_close($conn);
+    }
+  }
+
+
+  // prüfen, ob angemeldeter Benutzer ein Admin ist und erst dann wenn ein Admin angemeldet ist,
+  // werden die Users Daten aus dem Datenbank geholt.
+  if(isset($_COOKIE["privalage"])){
+    if($_COOKIE["privalage"] == 1){
+        $conn = mysqli_connect("localhost","root","","ludomo");  //Verbindung zu DB aufbauen
+        $sql = "SELECT * FROM user_tabelle WHERE username = '$_COOKIE[username]';";                    //SQL Statement holt alle Users aus user_tabelle
+        $result  = mysqli_query($conn, $sql);                   //SQL Statement ausführen
+
+        // Wenn Tabelle Userers hat, werden diese in eine Tabelle angezeigt (zusätzlich Optionen zur User Verwaltung)
+        if(mysqli_num_rows($result) > 0){
+          echo "<table style='width:100%'><caption></caption><thead><tr><th>Username</th><th>Email</th><th>Privilege</th><th>Delete</th></tr></thead><tbody>";
+          while($row = mysqli_fetch_assoc($result)) {
+            echo "<tr><td>".$row['username']."</td><td>".$row['email']."</td>";
+            if($row['privalage'] == 10){
+              echo "<td style='color:red'>ADMIN</td>";
+            }
+            else{
+              echo "<td style='color:green'>USER</td>";
+
+            }
+            // Buttons zur User Verwaltung. Also User Löschen/zum Admin hoch fördern/ zum Normalen User unter fördern
+            echo "<td><form method='get'><button class='tablebutton' type='submit' name='btnDelete' value=".$row['ID'].">Delete</button></form></td>";
+          }
+        }
+        echo "</tbody></table>";
+        mysqli_close($conn);
+    }
+  }
+
+?>
+</div>
+<br><br><br><br>

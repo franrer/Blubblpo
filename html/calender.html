@@ -1,0 +1,102 @@
+
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/calender.css">
+  <link rel="stylesheet" href="../assets/fonts/fontawesome/css/all.css">
+
+<div class="shop-container">
+  <div class="shop-titlebar">
+    <h1>Enjoy planning your life :)</h1>
+  </div>
+  <div class="shop-filter">
+    <form method="GET">
+      <div class="shop-filter-top">
+        <h1>Filter</h1>
+        <button type="submit" name="button">Apply</button>
+      </div>
+      <div class="shop-filter-content">
+                <div class="shop-filter-body">
+                   <h6>Prio Sort</h6>
+                   <hr>
+                   <?php
+                        //Liste aus Checkboxes für die Sortier mölichkeiten
+                       $con = mysqli_connect("localhost","root","","ludomo");
+
+                       $price_query = "SELECT * FROM price_sort";
+                       $price_query_run  = mysqli_query($con, $price_query);
+
+                       if(mysqli_num_rows($price_query_run) > 0)
+                       {
+                           foreach($price_query_run as $pricelist)
+                           {
+                               $checked = [];
+                               if(isset($_GET['price']))
+                               {
+                                   $checked = $_GET['price'];
+                               }
+                               ?>
+                                   <div>
+                                       <input type="checkbox" name="price[]" value="<?= $pricelist['id']; ?>"
+                                           <?php
+                                           // gewählte Filter Optionen speichern
+                                           if(in_array($pricelist['id'], $checked)){
+                                             echo "checked";
+                                         } ?>
+                                        />
+                                        <?= $pricelist['price']; ?>
+                                   </div>
+                               <?php
+                           }
+                       }
+                       else
+                       {
+                           echo "No prices Found";
+                       }
+                   ?>
+               </div>
+
+               <div class="shop-filter-body">
+                  <h6>Prio</h6>
+                  <hr>
+
+              </div>
+
+              <div class="shop-filter-body">
+                 <h6>Zeit</h6>
+                 <hr>
+
+             </div>
+
+              <div class="shop-filter-body">
+                 <h6>Genre List</h6>
+                 <hr>
+                 </div>
+
+                <div class="shop-filter-body">
+                   
+               </div>
+
+               <div class="shop-filter-body">
+                 
+              </div>
+               <div class="shop-filter-body">
+
+              </div>
+          </div>
+      </form>
+  </div>
+
+  <div class="shop-products">
+    
+    <div class="shop-product">
+      <div class="shop-product-bage">
+
+      </div>
+      <?php require_once('db.php') ?>
+
+      </div>
+    </div>
+
+  </div>
+
+
+<br><br><br><br><br><br><br><br>

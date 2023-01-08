@@ -1,0 +1,707 @@
+@font-face {
+  font-family: "Anton";
+  src: url('http://localhost/dhbw/tinf20_ludomo_app/assets/fonts/Anton-Regular.ttf');
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body{
+  background-color: #61bac3;
+  background-position: center;
+  background-size: contain;
+  height: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.home{
+  background-color: #61bac3;
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  justify-content: center;
+}
+
+.home-child{
+  display: flex;
+  width: 100%;
+  letter-spacing: 10px;
+  padding-top: 2vh;
+  font-family: "Anton";
+  text-align: center;
+  flex-direction: column;
+  color: rgb(0, 16, 160);
+}
+
+.home_td{
+  background-color: rgb(58, 11, 227);
+  border: 5px;
+  border-color: #B2009E;
+  border-style: solid;
+  height: 140px;
+  margin: 10px;
+}
+
+.home_td p{
+  color: #B2009E;
+  font-size: 20px;
+  margin: 5px;
+}
+
+.dev_text{
+  text-align: center;
+  font-size: 14px;
+  color: rgb(255, 255, 255);
+  font-family: 'Bahnschrift';
+  letter-spacing: normal;
+}
+
+#review_text_m{
+  margin-top: 40px;
+  text-align: center;
+  font-size: 24px;
+  color: rgb(222, 22, 162);
+  font-family: 'Bahnschrift';
+  letter-spacing: normal;
+  font-style: italic;
+  text-shadow: 2px 2px 8px #164cd5;
+}
+
+#review_text{
+  text-align: center;
+  font-size: 20px;
+  color: rgb(33, 16, 214);
+  font-family: 'Bahnschrift';
+  letter-spacing: normal;
+  font-style: italic;
+}
+
+
+
+.home-child input{
+  transition-duration: 0.4s;
+  width: 15vw;
+  color: rgb(51, 9, 238);
+  align-self: center;
+  font-size: 16px;
+  margin-top: 15px;
+  height: 50px;
+  border: solid;
+  text-decoration: none;
+  cursor: pointer;
+  background: none;
+}
+
+.home-child input:hover{
+  width: 15vw;
+  align-self: center;
+  border-color: rgb(209, 28, 185);
+  color: black;
+  font-size: 16px;
+  margin-top: 15px;
+  height: 50px;
+  border: solid;
+  text-decoration: none;
+  cursor: pointer;
+  background: rgb(168, 13, 13);
+}
+
+.img_container{
+  text-align: center;
+  margin: 24px 5px 24px 5px;
+}
+
+.account_td{
+
+  padding: 10px;
+
+}
+
+.form_container{
+  position: relative;
+  width: 40vw;
+}
+
+.inline_text{
+  font-family: 'Bahnschrift';
+  width: 95%;
+  display: block;
+  margin: 5px auto;
+  text-align: center;
+  padding: 5px;
+  border-radius: 4px;
+
+}
+
+#acc_text{
+  font-family: 'Bahnschrift';
+  width: 95%;
+  text-align: center;
+}
+
+#acc_text_big{
+  font-family: 'Bahnschrift';
+  width: 95%;
+  font-size: 20px;
+  text-align: center;
+}
+
+#contact_textarea{
+  width: 70%;
+  height: 200px;
+  margin: 10px;
+  resize: none;
+}
+
+.home_video{
+  margin: 10px;
+  border: 8px;
+  border-style: solid;
+  height: 40vh;
+  width: 40vw;
+}
+
+#home_table{
+  width: 100%;
+}
+
+#contact_table{
+  margin: 5px auto;
+}
+
+.contact_text{
+    font-family: 'Bahnschrift';
+    width: 95%;
+    display: block;
+    margin: 5px 5px 5px 10%;
+    text-align: left;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+.inline_button{
+  font-family: 'Bahnschrift';
+  width: 30vw;
+  text-align: center;
+  padding: 10px;
+  margin: 10px auto;
+  display: block;
+  border-radius: 10px;
+  transition: 300ms;
+  transition-delay: 10ms;
+  transition-timing-function: ease-in-out;
+}
+
+.inline_button_small{
+  font-family: 'Bahnschrift';
+  width: 20%;
+  padding: 10px;
+  margin: 10px auto;
+  float: right;
+  display: block;
+  border-radius: 4px;
+  transition: 100ms;
+  transition-timing-function: ease-in-out;
+}
+
+caption{
+  text-align: center;
+  font-family: 'Bahnschrift';
+  margin: 5px;
+  font-style: italic;
+}
+
+.tablebutton
+{
+  margin: 3px;
+  padding: 5px;
+}
+
+.account_table_container{
+  margin: 0px auto;
+  width: 40vw;
+}
+
+.account_form{
+  background-color: #61bac3;
+  padding: 20px;
+  margin: 10px auto;
+  border: solid black;
+  border-width: 8px;
+  border-style: double;
+  border-radius: 10px;
+  height: 700px;
+}
+
+.account_form_small{
+  background-color: #fff;
+  min-height: 80vh;;
+  padding: 20px;
+  margin: 2% 20% 5%;
+  border: solid black;
+  border-width: 8px;
+  border-style: double;
+  border-radius: 10px;
+  text-align: center;
+
+}
+
+.account_form_small strong{
+  margin: 5% 0% 0% 0%;
+}
+
+.inline_button:hover{
+    border-color: #a012b3;
+    transform: scale(1.2);
+}
+
+.avatar {
+  width: 12%;
+}
+
+.avatar_center {
+  width: 12%;
+  margin: 5px auto;
+}
+
+.button{
+background-color: white;
+border: none;
+color: black;
+padding: 15px 32px;
+text-align: center;
+display: inline-block;
+font-size: 16px;
+margin: 30px;
+cursor: pointer;
+transition: 250ms;
+transition-timing-function: ease-in;
+
+}
+
+.button:hover{
+  color: white;
+  background-color: black;
+  transform: scale(1.1);
+}
+
+
+.header{
+  width: 100%;
+  height: 120px;
+  display: block;
+  background-color: black ; 
+}
+
+.inner_header{
+  width: 80%;
+  height: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+
+.logo_container{
+  height: 100%;
+  display: table;
+  float: left;
+}
+
+
+.logo_container h1{
+  color: white;
+  height: 100%;
+  display: table-cell;
+  vertical-align: middle;
+
+  font-size: 32px;
+  font-weight: 100;
+}
+
+.logo_container h1 span{
+  font-family: 'Anton';
+  font-weight: 800;
+}
+
+.slogan_container{
+  height: 100%;
+  display: table;
+  float: left;
+}
+
+.slogan_container h1{
+  color: white;
+  height: 100%;
+  display: table-cell;
+  vertical-align: bottom;
+  font-family: 'Anton';
+  font-size: 15px;
+  font-weight: 100;
+  padding-bottom: 20%;
+}
+
+.navigation{
+  float: right;
+  height: 100%;
+}
+
+.navigation li a{
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 20px;
+  color: white;
+  font-family: 'Anton';
+  font-size: 22px;
+  text-decoration:none;
+}
+
+.navigation li a:last-child{
+  padding-right: 0px;
+
+}
+
+.navigation li{
+  display: table-cell;
+  height: 100%;
+  vertical-align: middle;
+  float: left;
+
+}
+
+
+footer{
+  position: relative;
+  bottom: 0;
+  margin-bottom: 0;
+  width: 100%;
+  background: #000;
+  padding: 5px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+footer .menu{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+
+footer .menu li{
+  list-style: none;
+}
+
+footer .menu li a{
+  font-size: 1.2em;
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+  text-decoration: none;
+  opacity: 0.75;
+}
+
+footer .menu li a:hover{
+  opacity: 1;
+}
+
+footer p{
+  color: #fff;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  font-size: 1.1em;
+
+}
+
+footer .wave{
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background:url("http://localhost/dhbw/tinf20_ludomo_app/assets/images/wave.png");
+  background-size: 3000px 100px;
+}
+
+footer .wave#wave1{
+  z-index: 1000;
+  opacity: 1;
+  bottom: 0;
+  animation: animateWave 4s linear infinite;
+}
+
+footer .wave#wave2{
+  z-index: 999;
+  opacity: 0.5;
+  bottom: 10px;
+  animation: animateWave_02 4s linear infinite;
+}
+footer .wave#wave3{
+  z-index: 1000;
+  opacity: 0.2;
+  bottom: 15px;
+  animation: animateWave 3s linear infinite;
+}
+
+footer .wave#wave4{
+  z-index: 999;
+  opacity: 0.7;
+  bottom: 20px;
+  animation: animateWave_02 3s linear infinite;
+}
+
+
+@keyframes animateWave {
+  0%{
+    background-position-x: 1000px;
+  }
+
+  100%{
+    background-position-x: 0px;
+  }
+}
+
+@keyframes animateWave_02 {
+  0%{
+    background-position-x: 0px;
+  }
+
+  100%{
+    background-position-x: 1000px;
+  }
+}
+
+
+#account_header{
+  text-align: center;
+  margin: 5px auto;
+}
+
+/*Bootstrap for Login/Register*/
+
+caption{
+  text-align: center;
+  font-family: 'Bahnschrift';
+  margin: 5px;
+  font-style: italic;
+}
+
+.product_card {
+    width: 400px;
+    border: none
+}
+
+.btr {
+    border-top-right-radius: 5px !important
+}
+
+.btl {
+    border-top-left-radius: 5px !important
+}
+
+.btn-dark {
+    color: #fff;
+    background-color: #0d6efd;
+    border-color: #0d6efd
+}
+
+.btn-dark:hover {
+    color: #fff;
+    background-color: #0d6efd;
+    border-color: #0d6efd
+}
+
+.nav-pills {
+    display: table !important;
+    width: 100%
+}
+
+.nav-pills .nav-link {
+    border-radius: 0px;
+    border-bottom: 1px solid #0d6efd40
+}
+
+.nav-item {
+    display: table-cell;
+    background: #0d6efd2e
+}
+
+.form {
+    padding: 10px;
+    height: 300px
+}
+
+.form input {
+    margin-bottom: 12px;
+    border-radius: 3px
+}
+
+.form input:focus {
+    box-shadow: none
+}
+
+.form button {
+    margin-top: 20px
+}
+
+
+
+.product_card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 200px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+
+.price {
+  color: grey;
+  font-size: 22px;
+}
+
+.product_card .title{
+  font-size: 20px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.product_card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  border: solid;
+  text-align: center;
+  cursor: pointer;
+  width: 90%;
+  font-size: 18px;
+  margin: 5px;
+}
+
+.product_card button:hover {
+  opacity: 0.7;
+}
+
+
+
+.cart-container{
+  height: 80vh;
+}
+
+.cart-content{
+  height: 50vh;
+  width: 59vw;
+  background: white;
+  margin-left: 20px;
+}
+
+
+.contact-content{
+  height: 80vh;
+}
+
+.card-header h4{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-header{
+  width: 60vw;
+  background: white;
+}
+
+
+.form_div_account{
+  margin-left: 0;
+}
+
+
+.ds_div{
+    background-color: #fff;
+}
+
+
+.styled-input {
+    float: left;
+    width: 293px;
+    margin: 1rem 0;
+    position: relative;
+    border-radius: 4px;
+}
+
+@media only screen and (max-width: 768px){
+    .styled-input {
+        width:100%;
+    }
+}
+
+.styled-input .label_cu {
+    color: #999;
+    padding: 1.3rem 30px 1rem 30px;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    -webkit-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+    pointer-events: none;
+}
+
+.styled-input.wide {
+    width: 650px;
+    max-width: 100%;
+}
+
+
+select[name="prios"] {
+    display: block;
+    font-size: 1em;
+    padding: .6em 1.4em .5em .8em;
+    width: 20em;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    border: 1px solid black;
+    box-shadow: 0 1px 0 1px rgba(0,0,0,.04);
+    border-radius: .5em;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color:  white;
+    color: black;
+    margin-left: 20vw;
+}
+select[name="prios"]::-ms-expand {
+    display: none;
+}
+
+.input_field{
+  height: 5vh;
+  width: 15vw;
+  text-align: center;
+}
+
+
+.info_img_container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.info_img_container .info_img img{
+  height: 10vh;
+  width: 5vw;
+}
